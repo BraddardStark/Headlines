@@ -1,0 +1,70 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="0dp"
+    android:paddingRight="0dp"
+    android:paddingTop="0dp"
+    android:background="#FFFFFF"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <ImageView
+        android:layout_width="320dp"
+        android:layout_height="100dp"
+        android:id="@+id/landscape"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/locationText"
+        android:paddingLeft="10dp"
+        android:textSize="30sp"
+        android:textColor="#211780"
+        android:shadowColor="#FFFFFF"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:layout_above="@+id/swiperefresh"
+        android:layout_alignParentStart="true"
+        android:maxWidth="260dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:id="@+id/temperatureText"
+        android:paddingRight="10dp"
+        android:layout_marginBottom="-5dp"
+        android:includeFontPadding="false"
+        android:gravity="bottom"
+        android:textSize="60sp"
+        android:textColor="#FFFFFF"
+        android:shadowColor="#211780"
+        android:shadowDx="1.5"
+        android:shadowDy="1.3"
+        android:shadowRadius="1.6"
+        android:layout_above="@+id/swiperefresh"
+        android:layout_alignParentEnd="true"
+        android:password="false"
+        android:phoneNumber="false"
+        android:singleLine="false" />
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/landscape">
+    <ExpandableListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/newsList"
+        android:background="#FFFFFF"
+        android:layout_below="@+id/landscape"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true" />
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</RelativeLayout>
